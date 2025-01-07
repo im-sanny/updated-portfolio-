@@ -15,7 +15,7 @@ const Sidebar = () => {
       <aside className="w-full max-w-md">
         <Card className="overflow-hidden border bg-card">
           <CardHeader className="space-y-6">
-            <div className="flex flex-row md:flex-col gap-4 md:gap-2 items-start">
+            <div className="flex flex-row md:flex-col gap-4 md:gap-4 items-start">
               <div className="relative shrink-0 mx-auto">
                 <Image
                   width={150}
@@ -38,7 +38,7 @@ const Sidebar = () => {
               </div>
             </div>
 
-            <CardDescription className="text-sm md:text-base leading-relaxed">
+            <CardDescription>
               Frontend Developer with expertise in React and a growing knowledge
               of TypeScript. Skilled in delivering user-centered, responsive
               applications with an eye for intuitive UX
