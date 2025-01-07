@@ -1,12 +1,11 @@
-import { Button } from '@/components/ui/button';
+import Sidebar from '@/components/Sidebar';
 
 export default function Home() {
   return (
-    <div>
-      <h1>
-        Welcome
-        <Button>click me</Button>
-      </h1>
-    </div>
+    <main>
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-5 md:mx-32 py-8">
+        <Sidebar />
+      </div>
+    </main>
   );
 }
