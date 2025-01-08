@@ -1,4 +1,5 @@
 import AboutMe from '@/components/AboutMe';
+import FeaturedProject from '@/components/FeaturedProject';
 import Sidebar from '@/components/Sidebar';
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         </div>
         <main className="md:col-span-2">
           <AboutMe />
+          <FeaturedProject />
         </main>
       </div>
     </div>
