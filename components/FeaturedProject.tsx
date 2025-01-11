@@ -9,7 +9,7 @@ import Link from 'next/link';
 const FeaturedProject = () => {
   return (
     <div className="my-6">
-      <h1 className="font-bold text-2xl mb-4">FeaturedProject</h1>
+      <h1 className="font-bold text-2xl mb-4">Featured Project</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <Card className="p-6">
           <CardTitle>Title</CardTitle>
