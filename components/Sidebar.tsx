@@ -61,22 +61,23 @@ const Sidebar = () => {
           <CardContent>
             <div className="border-t pt-6">
               <div className="flex justify-center items-center gap-8">
-                <a
+                {/* <a
                   href="#"
                   className="text-muted-foreground hover:text-blue-600 transition-all duration-200"
                   aria-label="Facebook Profile"
                 >
                   <Facebook strokeWidth={1.5} size={22} />
-                </a>
+                </a> */}
                 <a
-                  href="#"
+                  href="https://github.com/im-sanny"
                   className="text-muted-foreground hover:text-slate-900 transition-all duration-200"
                   aria-label="Github Profile"
                 >
                   <Github strokeWidth={1.5} size={22} />
                 </a>
                 <a
-                  href="#"
+                
+                  href="https://www.linkedin.com/in/im-sanny"
                   className="text-muted-foreground hover:text-blue-700 transition-all duration-200"
                   aria-label="LinkedIn Profile"
                 >
