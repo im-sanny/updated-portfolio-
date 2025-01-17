@@ -1,6 +1,7 @@
 import AboutMe from '@/components/AboutMe';
 import FeaturedProject from '@/components/FeaturedProject';
 import Sidebar from '@/components/Sidebar';
+import TechStack from '@/components/TechStack';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <main className="md:col-span-2">
           <AboutMe />
           <FeaturedProject />
+          <TechStack />
         </main>
       </div>
     </div>
