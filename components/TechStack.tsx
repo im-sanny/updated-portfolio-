@@ -15,7 +15,7 @@ const TechStack = () => {
     <div>
       <h1 className='font-bold text-2xl mb-4'>Tech Stack</h1>
       <Card>
-        <div className="text-center flex ">
+        <div className="text-center flex gap-6 justify-center items-center">
           <Image src={ts} alt='ts logo' width={36} height={36}></Image>
           <Image src={js} alt='js logo' width={36} height={36}></Image>
           <Image src={react} alt='react logo' width={36} height={36}></Image>
