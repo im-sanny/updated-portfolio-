@@ -1,12 +1,11 @@
 import { Button } from '@/components/ui/button';
-import Skills from '@/components/Skills';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
 } from '@/components/ui/card';
-import { Facebook, Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 
 const Sidebar = () => {
@@ -76,7 +75,7 @@ const Sidebar = () => {
                   <Github strokeWidth={1.5} size={22} />
                 </a>
                 <a
-                
+
                   href="https://www.linkedin.com/in/im-sanny"
                   className="text-muted-foreground hover:text-blue-700 transition-all duration-200"
                   aria-label="LinkedIn Profile"
@@ -87,9 +86,9 @@ const Sidebar = () => {
             </div>
           </CardContent>
         </Card>
-        <div className="mt-6">
+        {/* <div className="mt-6">
           <Skills></Skills>
-        </div>
+        </div> */}
       </aside>
     </>
   );
