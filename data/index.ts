@@ -1,21 +1,3 @@
-export const socialMedia = [
-  {
-    id: 1,
-    img: 'example img',
-    link: 'example link',
-  },
-  {
-    id: 1,
-    img: 'example img',
-    link: 'example link',
-  },
-  {
-    id: 1,
-    img: 'example img',
-    link: 'example link',
-  },
-];
-
 export const projects = [
   {
     id: 1,
