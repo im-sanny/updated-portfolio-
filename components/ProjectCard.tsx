@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
-import { Github, ExternalLink, Layers } from 'lucide-react';
 import { ProjectCardProps } from '@/app/types';
+import { ExternalLink, Github, Layers } from 'lucide-react';
 import Link from 'next/link';
+import React, { useState } from 'react';
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   project,
@@ -25,8 +25,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <div className="p-8 h-full flex flex-col justify-between">
           <div>
             <project.icon className="w-8 h-8 mb-4" />
-            <h3 className="text-2xl font-bold mb-4">{project.title}</h3>
-            <p className="mb-4 text-gray-600">{project.description}</p>
+            <h3 className="text-2xl font-bold mb-4 line-clamp-2">
+              {project.title}
+            </h3>
+            <p className="mb-4 text-gray-600 line-clamp-2">
+              {project.description}
+            </p>
 
             {/* Technology Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
@@ -72,8 +76,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
 
           {/* Detailed Project Modal */}
           {isDetailOpen && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-              <div className="bg-white p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto rounded-lg">
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 h-screen">
+              <div className="bg-white p-8 max-w-2xl w-full h-full max-h-screen">
+                {/* Modal Header */}
                 <div className="flex justify-between items-center mb-6">
                   <h2 className="text-3xl font-bold">{project.title}</h2>
                   <button
@@ -84,9 +89,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                   </button>
                 </div>
 
-                <div>
+                {/* Modal Content */}
+                <div className="flex flex-col h-full">
                   <h3 className="text-xl font-semibold mb-4">Key Features</h3>
-                  <ul className="list-disc pl-5 space-y-2">
+                  <ul className="list-disc pl-5 space-y-2 flex-grow">
                     {project.features.map((feature, index) => (
                       <li key={index} className="text-gray-700">
                         {feature}

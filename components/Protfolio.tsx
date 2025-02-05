@@ -3,9 +3,10 @@ import { TerminalHistoryItem } from '@/app/types';
 import { BackgroundPattern } from '@/components/BackgroundPattern';
 import { ContactLink } from '@/components/ContactLink';
 import { CustomCursor } from '@/components/CustomCursor';
+import { Head } from '@/components/Head';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Terminal } from '@/components/Terminal';
-import { aboutData, projects, socialLinks } from '@/data/data';
+import { projects, socialLinks } from '@/data/data';
 import { Box, Command } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
@@ -210,56 +211,9 @@ const Portfolio = () => {
         handleCommand={handleCommand}
       />
 
+      {/* header section */}
       <main className="container mx-auto px-4">
-        <section className="min-h-screen flex items-center relative">
-          <div className="absolute inset-0 grid grid-cols-[repeat(auto-fill,minmax(50px,1fr))] opacity-10 pointer-events-none">
-            {Array.from({ length: 200 }).map((_, i) => (
-              <div
-                key={i}
-                className="aspect-square border border-black/20 transition-colors duration-500"
-                onMouseEnter={() =>
-                  setActivePattern((prev) => (prev + 1) % patterns.length)
-                }
-              />
-            ))}
-          </div>
-
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
-            {/* Main Heading */}
-            <h1 className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-bold mb-6 relative group text-wrap leading-tight break-words w-full">
-              <span className="absolute -top-6 left-0 text-xs sm:text-sm font-normal opacity-0 group-hover:opacity-100 transition-opacity">
-                function
-              </span>
-              createWebExperiences() {'{'}
-            </h1>
-
-            {/* Details Section */}
-            <div className="ml-2 sm:ml-6 space-y-4 text-sm sm:text-lg md:text-xl">
-              {['name', 'role', 'loves'].map((item) => (
-                <p
-                  key={item}
-                  id={`magnetic-${item}`}
-                  className="transition-transform duration-300"
-                  style={{
-                    transitionTimingFunction:
-                      'cubic-bezier(0.34, 1.56, 0.64, 1)',
-                  }}
-                >
-                  const {item} ={' '}
-                  {item === 'loves'
-                    ? '["Clean Code", "Creative UI", "Animation"]'
-                    : `"${aboutData[item as keyof typeof aboutData]}"`}
-                  ;
-                </p>
-              ))}
-            </div>
-
-            {/* Closing Bracket */}
-            <p className="text-4xl sm:text-4xl md:text-6xl lg:text-8xl font-bold mt-6 w-full">
-              {'}'}
-            </p>
-          </div>
-        </section>
+        <Head />
 
         {/* Projects Section */}
         <section className="py-20">
