@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
@@ -19,7 +20,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="https://i.ibb.co/dQzQ01B/code.png" />
       </head>
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
