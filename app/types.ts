@@ -12,6 +12,9 @@ export interface Project {
   description: string;
   tags: string[];
   icon: LucideIcon;
+  githubLink: string;
+  liveLink: string;
+  features: string[];
 }
 
 export interface CursorProps {

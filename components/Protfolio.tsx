@@ -1,4 +1,3 @@
-// Portfolio.tsx (main component)
 'use client';
 import { Project, TerminalHistoryItem } from '@/app/types';
 import { BackgroundPattern } from '@/components/BackgroundPattern';
@@ -29,12 +28,49 @@ const Portfolio = () => {
 
   const projects: Project[] = [
     {
-      title: 'Interactive Storytelling App',
-      description: 'Choose-your-own-adventure web experience',
-      tags: ['React', 'GSAP', 'CSS Grid'],
+      title: 'TrickNShip - Parcel Management App',
+      description: 'Efficiently manage and track parcels with TrickNShip',
+      tags: ['React', 'Tailwind', 'MongoDB', 'Firebase', 'NodeJs', 'Shadcn'],
       icon: Globe,
+      githubLink: 'https://github.com/im-sanny/trackNShip-client-a12',
+      liveLink: 'https://tracknship22.web.app/',
+      features: [
+        'Real-time parcel tracking',
+        'User-friendly dashboard',
+        'Multi-carrier support',
+        'Detailed analytics',
+      ],
     },
-    // ... other projects
+    {
+      title: 'StudyHive - Online Group Study & Assignment Application',
+      description:
+        'Online application designed for collaborative assignments and effective teamwork.',
+      tags: ['React', 'Tailwind', 'MongoDB', 'Firebase', 'NodeJs'],
+      icon: Globe,
+      githubLink: 'https://github.com/im-sanny/studyHive-client-a11',
+      liveLink: 'https://b9a11-a9c79.web.app',
+      features: [
+        'Dynamic Assignment Creation',
+        'Responsive Design',
+        'Assignment Management',
+        'Submission and Grading',
+      ],
+    },
+    {
+      title: 'DrawNook - Art & Craft Store',
+      description:
+        'An Art and Craft website dedicated to display painting, drawing, and craft-related products',
+      tags: ['React', 'Tailwind', 'MongoDB', 'Firebase', 'NodeJs'],
+      icon: Globe,
+      githubLink: 'https://github.com/im-sanny/drawNook-client-a10',
+      liveLink: 'https://drawnook-a10.web.app',
+      features: [
+        'React-simple-typewriter',
+        'User-friendly environment',
+        'React Awesome Reveal',
+        'React Lottie',
+      ],
+    },
   ];
 
   // Terminal commands
@@ -169,9 +205,6 @@ const Portfolio = () => {
             </div>
             <p className="text-4xl md:text-8xl font-bold mt-8">{'}'}</p>
           </div>
-        </section>
-        <section className="min-h-screen flex items-center relative">
-          {/* ... hero content ... */}
         </section>
 
         {/* Projects Section */}
