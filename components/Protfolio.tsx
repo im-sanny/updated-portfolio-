@@ -6,7 +6,7 @@ import { CustomCursor } from '@/components/CustomCursor';
 import { Head } from '@/components/Head';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Terminal } from '@/components/Terminal';
-import { projects, socialLinks } from '@/data/data';
+import { projects, socialLinks, patterns } from '@/data/data';
 import { Box, Command } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
@@ -20,13 +20,7 @@ const Portfolio = () => {
   const [activePattern, setActivePattern] = useState(0);
   const [isExploding, setIsExploding] = useState(false);
 
-  const patterns = [
-    'repeating-linear-gradient(45deg, #fff 0%, #fff 2%, #e5e5e5 2%, #e5e5e5 4%)',
-    'repeating-radial-gradient(circle at 50% 50%, #fff 0%, #fff 2%, #e5e5e5 2%, #e5e5e5 4%)',
-    'repeating-conic-gradient(#fff 0% 2%, #e5e5e5 2% 4%)',
-    'linear-gradient(0deg, #fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
-    'radial-gradient(circle at center, #e5e5e5 1px, transparent 1px)',
-  ];
+
 
   // Terminal commands
   const terminalCommands = React.useMemo(
