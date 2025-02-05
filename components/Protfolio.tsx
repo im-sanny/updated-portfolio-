@@ -1,19 +1,13 @@
 'use client';
-import { Project, TerminalHistoryItem } from '@/app/types';
+import { TerminalHistoryItem } from '@/app/types';
 import { BackgroundPattern } from '@/components/BackgroundPattern';
 import { ContactLink } from '@/components/ContactLink';
 import { CustomCursor } from '@/components/CustomCursor';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Terminal } from '@/components/Terminal';
-import { socialLinks } from '@/data/data';
-import { Box, Command, Github, Globe, Linkedin, Mail } from 'lucide-react';
+import { aboutData, projects, socialLinks } from '@/data/data';
+import { Box, Command } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-
-interface AboutData {
-  name: string;
-  role: string;
-  loves: string[];
-}
 
 const Portfolio = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -31,53 +25,6 @@ const Portfolio = () => {
     'repeating-conic-gradient(#fff 0% 2%, #e5e5e5 2% 4%)',
     'linear-gradient(0deg, #fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)',
     'radial-gradient(circle at center, #e5e5e5 1px, transparent 1px)',
-  ];
-
-  const projects: Project[] = [
-    {
-      title: 'TrickNShip - Parcel Management App',
-      description: 'Efficiently manage and track parcels with TrickNShip',
-      tags: ['React', 'Tailwind', 'MongoDB', 'Firebase', 'NodeJs', 'Shadcn'],
-      icon: Globe,
-      githubLink: 'https://github.com/im-sanny/trackNShip-client-a12',
-      liveLink: 'https://tracknship22.web.app/',
-      features: [
-        'Real-time parcel tracking',
-        'User-friendly dashboard',
-        'Multi-carrier support',
-        'Detailed analytics',
-      ],
-    },
-    {
-      title: 'StudyHive - Online Group Study & Assignment Application',
-      description:
-        'Online application designed for collaborative assignments and effective teamwork.',
-      tags: ['React', 'Tailwind', 'MongoDB', 'Firebase', 'NodeJs'],
-      icon: Globe,
-      githubLink: 'https://github.com/im-sanny/studyHive-client-a11',
-      liveLink: 'https://b9a11-a9c79.web.app',
-      features: [
-        'Dynamic Assignment Creation',
-        'Responsive Design',
-        'Assignment Management',
-        'Submission and Grading',
-      ],
-    },
-    {
-      title: 'DrawNook - Art & Craft Store',
-      description:
-        'An Art and Craft website dedicated to display painting, drawing, and craft-related products',
-      tags: ['React', 'Tailwind', 'MongoDB', 'Firebase', 'NodeJs'],
-      icon: Globe,
-      githubLink: 'https://github.com/im-sanny/drawNook-client-a10',
-      liveLink: 'https://drawnook-a10.web.app',
-      features: [
-        'React-simple-typewriter',
-        'User-friendly environment',
-        'React Awesome Reveal',
-        'React Lottie',
-      ],
-    },
   ];
 
   // Terminal commands
@@ -245,12 +192,6 @@ const Portfolio = () => {
     setCurrentCommand('');
   };
 
-  const data: AboutData = {
-    name: 'Rasel Parvez Sanny',
-    role: 'Frontend Developer',
-    loves: ['Clean Code', 'Creative UI', 'Animation'],
-  };
-
   return (
     <div
       className={`min-h-screen bg-white text-black overflow-hidden ${
@@ -307,7 +248,7 @@ const Portfolio = () => {
                   const {item} ={' '}
                   {item === 'loves'
                     ? '["Clean Code", "Creative UI", "Animation"]'
-                    : `"${data[item as keyof typeof data]}"`}
+                    : `"${aboutData[item as keyof typeof aboutData]}"`}
                   ;
                 </p>
               ))}
