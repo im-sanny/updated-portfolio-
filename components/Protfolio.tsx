@@ -6,7 +6,12 @@ import { CustomCursor } from '@/components/CustomCursor';
 import { Head } from '@/components/Head';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Terminal } from '@/components/Terminal';
-import { projects, socialLinks, patterns } from '@/data/data';
+import {
+  projects,
+  socialLinks,
+  patterns,
+  terminalContentData,
+} from '@/data/data';
 import { Box, Command } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
@@ -20,67 +25,28 @@ const Portfolio = () => {
   const [activePattern, setActivePattern] = useState(0);
   const [isExploding, setIsExploding] = useState(false);
 
-
-
   // Terminal commands
   const terminalCommands = React.useMemo(
     () => ({
       help: () => ({
-        output: [
-          'Available commands:',
-          '- help: Show this help message',
-          '- about: Display information about me',
-          '- skills: List technical skills',
-          '- projects: Show project details',
-          '- contact: Display contact information',
-          '- clear: Clear terminal',
-          '- theme: Toggle terminal theme',
-          '- explode: Visual surprise',
-        ],
+        output: terminalContentData.help.messages,
       }),
       about: () => ({
-        output: [
-          '🚀 Who Am I?',
-          'Name: Rasel Parvez Sanny',
-          'Role: Frontend Developer & Creative Technologist',
-          'Location: Jessore, Bangladesh',
-          '',
-          '💡 Passion: Turning ideas into interactive digital experiences',
-          '🔧 Specialties: React, Next.js, TypeScript',
-          '',
-          'Want to know more? Try commands like "skills", "projects"',
-        ],
+        output: terminalContentData.about.messages,
       }),
       skills: () => ({
-        output: [
-          '🛠️ Technical Skills:',
-          '• Frontend: React, Next.js, TypeScript, Tailwind CSS, Shadcn',
-          '• Backend: Node.js, Express, MongoDB',
-          '• Tools: Git, Vercel, Netlify, Figma',
-          '• Soft Skills: Problem Solving, Communication, Creativity',
-        ],
+        output: terminalContentData.skills.messages,
       }),
       projects: () => ({
-        output: [
-          'Project 1: https://tracknship22.web.app',
-          'Project 2: https://b9a11-a9c79.web.app',
-          'Project 3: https://drawnook-a10.web.app',
-        ],
+        output: terminalContentData.projects.messages,
       }),
       contact: () => ({
-        output: [
-          '📞 Contact Information:',
-          'Email: raselparvezsanny@gmail.com',
-          'LinkedIn: https://www.linkedin.com/in/im-sanny',
-          'GitHub: https://github.com/im-sanny',
-          '',
-          'Open to collaboration and exciting opportunities!',
-        ],
+        output: terminalContentData.contact.messages,
       }),
       clear: () => {
         setTerminalHistory([]);
         return {
-          output: ['Terminal cleared. Start typing your next command!'],
+          output: terminalContentData.clear.messages,
         };
       },
       explode: () => {

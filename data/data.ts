@@ -61,6 +61,72 @@ export const projects = [
   },
 ];
 
+// terminal data
+export const terminalContentData = {
+  help: {
+    messages: [
+      'Available commands:',
+      '- help: Show this help message',
+      '- about: Display information about me',
+      '- skills: List technical skills',
+      '- projects: Show project details',
+      '- contact: Display contact information',
+      '- clear: Clear terminal',
+      '- theme: Toggle terminal theme',
+      '- explode: Visual surprise',
+    ],
+  },
+  about: {
+    messages: [
+      '🚀 Who Am I?',
+      'Name: Rasel Parvez Sanny',
+      'Role: Frontend Developer & Creative Technologist',
+      'Location: Jessore, Bangladesh',
+      '',
+      '💡 Passion: Turning ideas into interactive digital experiences',
+      '🔧 Specialties: React, Next.js, TypeScript',
+      '',
+      'Want to know more? Try commands like "skills", "projects"',
+    ],
+  },
+  skills: {
+    messages: [
+      '🛠️ Technical Skills:',
+      '• Frontend: React, Next.js, TypeScript, Tailwind CSS, Shadcn',
+      '• Backend: Node.js, Express, MongoDB',
+      '• Tools: Git, Vercel, Netlify, Figma',
+      '• Soft Skills: Problem Solving, Communication, Creativity',
+    ],
+  },
+  projects: {
+    messages: [
+      'Project 1: https://tracknship22.web.app',
+      'Project 2: https://b9a11-a9c79.web.app',
+      'Project 3: https://drawnook-a10.web.app',
+    ],
+  },
+  contact: {
+    messages: [
+      '📞 Contact Information:',
+      'Email: raselparvezsanny@gmail.com',
+      'LinkedIn: https://www.linkedin.com/in/im-sanny',
+      'GitHub: https://github.com/im-sanny',
+      '',
+      'Open to collaboration and exciting opportunities!',
+    ],
+  },
+  explode: {
+    messages: [
+      '💥 MEGA EXPLOSION! 💥',
+      'The universe just got a little more chaotic.',
+      'Hope you enjoyed the show!',
+    ],
+  },
+  clear: {
+    messages: ['Terminal cleared. Start typing your next command!'],
+  },
+};
+
 export const socialLinks = [
   {
     label: 'GitHub',
