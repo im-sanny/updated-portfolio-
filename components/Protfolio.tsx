@@ -1,8 +1,9 @@
 // Portfolio.tsx (main component)
-"use client"
+'use client';
 import { Project, TerminalHistoryItem } from '@/app/types';
 import { BackgroundPattern } from '@/components/BackgroundPattern';
 import { CustomCursor } from '@/components/CustomCursor';
+import { ProjectCard } from '@/components/ProjectCard';
 import { Terminal } from '@/components/Terminal';
 import { Box, Command, Github, Globe, Linkedin, Mail } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
