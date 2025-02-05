@@ -87,10 +87,103 @@ const Portfolio = () => {
           '- clear: Clear terminal',
           '- theme: Toggle terminal theme',
           '- explode: Visual surprise',
-          '- coffee: Buy me a coffee',
         ],
       }),
-      // ... other commands
+      about: () => ({
+        output: [
+          '🚀 Who Am I?',
+          'Name: Rasel Parvez Sanny',
+          'Role: Frontend Developer & Creative Technologist',
+          'Location: Jessore, Bangladesh',
+          '',
+          '💡 Passion: Turning ideas into interactive digital experiences',
+          '🔧 Specialties: React, Next.js, TypeScript',
+          '',
+          'Want to know more? Try commands like "skills", "projects"',
+        ],
+      }),
+      skills: () => ({
+        output: [
+          '🛠️ Technical Skills:',
+          '• Frontend: React, Next.js, TypeScript, Tailwind CSS, Shadcn',
+          '• Backend: Node.js, Express, MongoDB',
+          '• Tools: Git, Vercel, Netlify, Figma',
+          '• Soft Skills: Problem Solving, Communication, Creativity',
+        ],
+      }),
+      projects: () => ({
+        output: [
+          'Project 1: https://tracknship22.web.app',
+          'Project 2: https://b9a11-a9c79.web.app',
+          'Project 3: https://drawnook-a10.web.app',
+        ],
+      }),
+      contact: () => ({
+        output: [
+          '📞 Contact Information:',
+          'Email: raselparvezsanny@gmail.com',
+          'LinkedIn: https://www.linkedin.com/in/im-sanny',
+          'GitHub: https://github.com/im-sanny',
+          '',
+          'Open to collaboration and exciting opportunities!',
+        ],
+      }),
+      clear: () => {
+        setTerminalHistory([]);
+        return {
+          output: ['Terminal cleared. Start typing your next command!'],
+        };
+      },
+      explode: () => {
+        setIsExploding(true);
+        // Randomize background color
+        document.body.style.backgroundColor = `rgb(
+        ${Math.random() * 255},
+        ${Math.random() * 255},
+        ${Math.random() * 255}
+        )`;
+
+        // Create temporary confetti effect
+        const confettiContainer = document.createElement('div');
+        confettiContainer.style.position = 'fixed';
+        confettiContainer.style.top = '0';
+        confettiContainer.style.left = '0';
+        confettiContainer.style.width = '100%';
+        confettiContainer.style.height = '100%';
+        confettiContainer.style.pointerEvents = 'none';
+        confettiContainer.style.zIndex = '9999';
+
+        // Add some confetti elements
+        for (let i = 0; i < 100; i++) {
+          const confetti = document.createElement('div');
+          confetti.style.position = 'absolute';
+          confetti.style.width = '10px';
+          confetti.style.height = '10px';
+          confetti.style.backgroundColor = `hsl(${
+            Math.random() * 360
+          }, 50%, 50%)`;
+          confetti.style.left = `${Math.random() * 100}%`;
+          confetti.style.top = `${Math.random() * 100}%`;
+          confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+          confettiContainer.appendChild(confetti);
+        }
+
+        document.body.appendChild(confettiContainer);
+
+        setTimeout(() => {
+          setIsExploding(false);
+          document.body.style.backgroundColor = '';
+          document.body.removeChild(confettiContainer);
+        }, 2000);
+
+        return {
+          output: [
+            '💥 MEGA EXPLOSION! 💥',
+            'The universe just got a little more chaotic.',
+            'Hope you enjoyed the show!',
+          ],
+        };
+      },
     }),
     [],
   );
