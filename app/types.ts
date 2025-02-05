@@ -44,4 +44,5 @@ export interface ContactLinkProps {
   label: string;
   icon: LucideIcon;
   pattern: string;
+  link: string;
 }

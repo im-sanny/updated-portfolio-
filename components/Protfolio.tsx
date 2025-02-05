@@ -5,6 +5,7 @@ import { ContactLink } from '@/components/ContactLink';
 import { CustomCursor } from '@/components/CustomCursor';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Terminal } from '@/components/Terminal';
+import { socialLinks } from '@/data/data';
 import { Box, Command, Github, Globe, Linkedin, Mail } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
@@ -364,16 +365,13 @@ const Portfolio = () => {
               Let's create something unique together
             </h2>
             <div className="space-y-4">
-              {[
-                { label: 'GitHub', icon: Github },
-                { label: 'LinkedIn', icon: Linkedin },
-                { label: 'Email', icon: Mail },
-              ].map((item) => (
+              {socialLinks.map((item) => (
                 <ContactLink
                   key={item.label}
                   label={item.label}
                   icon={item.icon}
                   pattern={patterns[0]}
+                  link={item.link}
                 />
               ))}
             </div>
