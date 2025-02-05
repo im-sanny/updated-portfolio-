@@ -2,6 +2,7 @@
 'use client';
 import { Project, TerminalHistoryItem } from '@/app/types';
 import { BackgroundPattern } from '@/components/BackgroundPattern';
+import { ContactLink } from '@/components/ContactLink';
 import { CustomCursor } from '@/components/CustomCursor';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Terminal } from '@/components/Terminal';
