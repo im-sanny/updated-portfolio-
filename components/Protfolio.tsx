@@ -128,7 +128,48 @@ const Portfolio = () => {
       />
 
       <main className="container mx-auto px-4">
-        {/* Hero Section */}
+        <section className="min-h-screen flex items-center relative">
+          <div className="absolute inset-0 grid grid-cols-[repeat(auto-fill,minmax(50px,1fr))] opacity-10 pointer-events-none">
+            {Array.from({ length: 200 }).map((_, i) => (
+              <div
+                key={i}
+                className="aspect-square border border-black/20 transition-colors duration-500"
+                onMouseEnter={() =>
+                  setActivePattern((prev) => (prev + 1) % patterns.length)
+                }
+              />
+            ))}
+          </div>
+
+          <div className="relative mx-auto">
+            <h1 className="text-4xl md:text-8xl font-bold mb-8 relative group text-wrap">
+              <span className="absolute -top-8 left-0 text-base font-normal opacity-0 group-hover:opacity-100 transition-opacity">
+                function
+              </span>
+              createWebExperiences() {'{'}
+            </h1>
+            <div className="ml-8 space-y-4 text-xl">
+              {['name', 'role', 'loves'].map((item, index) => (
+                <p
+                  key={item}
+                  id={`magnetic-${item}`}
+                  className="transition-transform duration-300"
+                  style={{
+                    transitionTimingFunction:
+                      'cubic-bezier(0.34, 1.56, 0.64, 1)',
+                  }}
+                >
+                  const {item} ={' '}
+                  {item === 'loves'
+                    ? '["Clean Code", "Creative UI", "Animation"]'
+                    : `"Your ${item}"`}
+                  ;
+                </p>
+              ))}
+            </div>
+            <p className="text-4xl md:text-8xl font-bold mt-8">{'}'}</p>
+          </div>
+        </section>
         <section className="min-h-screen flex items-center relative">
           {/* ... hero content ... */}
         </section>
