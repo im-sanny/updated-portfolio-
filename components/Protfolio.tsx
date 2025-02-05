@@ -8,6 +8,12 @@ import { Terminal } from '@/components/Terminal';
 import { Box, Command, Github, Globe, Linkedin, Mail } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
+interface AboutData {
+  name: string;
+  role: string;
+  loves: string[];
+}
+
 const Portfolio = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const [isTerminalOpen, setIsTerminalOpen] = useState(false);
@@ -238,6 +244,12 @@ const Portfolio = () => {
     setCurrentCommand('');
   };
 
+  const data: AboutData = {
+    name: 'Rasel Parvez Sanny',
+    role: 'Frontend Developer',
+    loves: ['Clean Code', 'Creative UI', 'Animation'],
+  };
+
   return (
     <div
       className={`min-h-screen bg-white text-black overflow-hidden ${
@@ -291,7 +303,7 @@ const Portfolio = () => {
                   const {item} ={' '}
                   {item === 'loves'
                     ? '["Clean Code", "Creative UI", "Animation"]'
-                    : `"Your ${item}"`}
+                    : `"${data[item as keyof typeof data]}"`}
                   ;
                 </p>
               ))}
