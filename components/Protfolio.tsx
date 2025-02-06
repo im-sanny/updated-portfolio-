@@ -7,9 +7,9 @@ import { Head } from '@/components/Head';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Terminal } from '@/components/Terminal';
 import {
+  patterns,
   projects,
   socialLinks,
-  patterns,
   terminalContentData,
 } from '@/data/data';
 import { Box, Command } from 'lucide-react';
@@ -22,7 +22,7 @@ const Portfolio = () => {
     [],
   );
   const [currentCommand, setCurrentCommand] = useState('');
-  const [activePattern, setActivePattern] = useState(0);
+  const [activePattern, setActivePattern] = useState(1);
   const [isExploding, setIsExploding] = useState(false);
 
   // Terminal commands

@@ -1,4 +1,3 @@
-'use client';
 import { ProjectCardProps } from '@/app/types';
 import { ExternalLink, Github, Layers } from 'lucide-react';
 import Link from 'next/link';
