@@ -9,6 +9,7 @@ export const ContactLink: React.FC<ContactLinkProps> = ({
 }) => (
   <a
     href={link}
+    target='_blank'
     className="block p-4 border border-black hover:bg-black hover:text-blue-500 transition-colors group relative overflow-hidden"
   >
     <div className="flex items-center justify-between relative z-10">

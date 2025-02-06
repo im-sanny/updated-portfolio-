@@ -40,6 +40,9 @@ const Portfolio = () => {
       projects: () => ({
         output: terminalContentData.projects.messages,
       }),
+      resume: () => ({
+        output: terminalContentData.resume.messages,
+      }),
       contact: () => ({
         output: terminalContentData.contact.messages,
       }),

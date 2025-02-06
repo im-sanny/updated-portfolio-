@@ -1,4 +1,12 @@
-import { Code, Computer, Github, Globe, Linkedin, Mail } from 'lucide-react';
+import {
+  Code,
+  Computer,
+  FileText,
+  Github,
+  Globe,
+  Linkedin,
+  Mail,
+} from 'lucide-react';
 
 export const patterns = [
   'repeating-linear-gradient(45deg, #fff 0%, #fff 2%, #e5e5e5 2%, #e5e5e5 4%)',
@@ -70,6 +78,7 @@ export const terminalContentData = {
       '- about: Display information about me',
       '- skills: List technical skills',
       '- projects: Show project details',
+      '- resume: View my resume',
       '- contact: Display contact information',
       '- clear: Clear terminal',
       '- theme: Toggle terminal theme',
@@ -83,8 +92,8 @@ export const terminalContentData = {
       'Role: Frontend Developer & Creative Technologist',
       'Location: Jessore, Bangladesh',
       '',
-      '💡 Passion: Turning ideas into interactive digital experiences',
-      '🔧 Specialties: React, Next.js, TypeScript',
+      'Passion: Turning ideas into interactive digital experiences',
+      'Specialties: React, Next.js, TypeScript',
       '',
       'Want to know more? Try commands like "skills", "projects"',
     ],
@@ -104,6 +113,9 @@ export const terminalContentData = {
       'Project 2: https://b9a11-a9c79.web.app',
       'Project 3: https://drawnook-a10.web.app',
     ],
+  },
+  resume: {
+    messages: ['💼 My Resume', '', 'https://shorturl.at/mAbIH'],
   },
   contact: {
     messages: [
@@ -128,6 +140,11 @@ export const terminalContentData = {
 };
 
 export const socialLinks = [
+  {
+    label: 'Resume',
+    icon: FileText,
+    link: 'https://shorturl.at/mAbIH',
+  },
   {
     label: 'GitHub',
     icon: Github,
