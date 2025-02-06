@@ -12,6 +12,7 @@ import {
   socialLinks,
   terminalContentData,
 } from '@/data/data';
+import { triggerExplodeEffect } from '@/utils/confettiUtils';
 import { Box, Command } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 
@@ -53,53 +54,9 @@ const Portfolio = () => {
         };
       },
       explode: () => {
-        setIsExploding(true);
-        // Randomize background color
-        document.body.style.backgroundColor = `rgb(
-        ${Math.random() * 255},
-        ${Math.random() * 255},
-        ${Math.random() * 255}
-        )`;
-
-        // Create temporary confetti effect
-        const confettiContainer = document.createElement('div');
-        confettiContainer.style.position = 'fixed';
-        confettiContainer.style.top = '0';
-        confettiContainer.style.left = '0';
-        confettiContainer.style.width = '100%';
-        confettiContainer.style.height = '100%';
-        confettiContainer.style.pointerEvents = 'none';
-        confettiContainer.style.zIndex = '9999';
-
-        // Add some confetti elements
-        for (let i = 0; i < 100; i++) {
-          const confetti = document.createElement('div');
-          confetti.style.position = 'absolute';
-          confetti.style.width = '10px';
-          confetti.style.height = '10px';
-          confetti.style.backgroundColor = `hsl(${
-            Math.random() * 360
-          }, 50%, 50%)`;
-          confetti.style.left = `${Math.random() * 100}%`;
-          confetti.style.top = `${Math.random() * 100}%`;
-          confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-          confettiContainer.appendChild(confetti);
-        }
-
-        document.body.appendChild(confettiContainer);
-
-        setTimeout(() => {
-          setIsExploding(false);
-          document.body.style.backgroundColor = '';
-          document.body.removeChild(confettiContainer);
-        }, 2000);
-
+        triggerExplodeEffect(setIsExploding);
         return {
-          output: [
-            '💥 MEGA EXPLOSION! 💥',
-            'The universe just got a little more chaotic.',
-            'Hope you enjoyed the show!',
-          ],
+          output: terminalContentData.explode.messages,
         };
       },
     }),
